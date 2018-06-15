@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
-var PORT = 1000;
+var PORT = 8000;
 
-app.listen(PORT, ()=> {
+// Iniciando aplicação
+app.listen(PORT, () => {
     console.log(`Ouvindo na porta ${PORT} =)`);
-})
+});
