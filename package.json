@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "cd front && npm server",
-    "server": "node index.js",
+    "client": "cd front && npm start",
+    "server": "cd server node index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "repository": {
