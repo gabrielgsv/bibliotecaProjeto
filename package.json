@@ -1,0 +1,23 @@
+{
+  "name": "projetoBiblioteca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvcampos/projetoBiblioteca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvcampos/projetoBiblioteca/issues"
+  },
+  "homepage": "https://github.com/jvcampos/projetoBiblioteca#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
