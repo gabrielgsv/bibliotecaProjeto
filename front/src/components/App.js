@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -27,6 +28,9 @@ class App extends Component {
     return (
       <div className="App">
         <p className="App-intro">{this.state.mensagem}</p>
+        <button>
+          <Link to="/teste">Ir para teste sem refresh</Link> 
+        </button>
       </div>
     );
   }
