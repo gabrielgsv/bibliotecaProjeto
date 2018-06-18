@@ -1,5 +1,45 @@
 import React, { Component } from 'react';
 
+class FormAluno extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nome: '',
+      email: '',
+      senha: ''
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+    console.log(this.state)
+  }
+
+  render() {
+    return (
+      <div>
+        <form>
+          <label>Nome</label>
+          <input type='text' name='nome' onChange={this.handleChange} />
+
+          <label>Email</label>
+          <input type='text' name='email' onChange={this.handleChange} />
+          
+          <label>Senha</label>
+          <input type='text' name='senha' onChange={this.handleChange} />
+        </form>
+      </div>
+    )
+  }
+}
+
+export default FormAluno;
+
+
+
+/*import React, { Component } from 'react';
+
 export default class FormularioAluno extends Component {
   constructor(props){
       super(props);
@@ -44,3 +84,4 @@ export default class FormularioAluno extends Component {
     )
   }
 };
+*/
