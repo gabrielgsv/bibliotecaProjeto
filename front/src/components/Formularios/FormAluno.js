@@ -6,7 +6,8 @@ class FormAluno extends Component {
     this.state = {
       nome: '',
       email: '',
-      senha: ''
+      senha: '',
+      curso: '',
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -30,7 +31,7 @@ class FormAluno extends Component {
           <input type='password' name='senha' onChange={this.handleChange} />
 
           <label>Curso</label>
-          <select>
+          <select onChange={this.handleChange}>
             <option value="administracao">Administração</option>
             <option value="medicina">Medicina</option>
             <option value="odontologia">Odontologia</option>
