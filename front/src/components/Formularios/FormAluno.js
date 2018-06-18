@@ -27,7 +27,15 @@ class FormAluno extends Component {
           <input type='text' name='email' onChange={this.handleChange} />
           
           <label>Senha</label>
-          <input type='text' name='senha' onChange={this.handleChange} />
+          <input type='password' name='senha' onChange={this.handleChange} />
+
+          <label>Curso</label>
+          <select>
+            <option value="administracao">Administração</option>
+            <option value="medicina">Medicina</option>
+            <option value="odontologia">Odontologia</option>
+            <option value="direito">Direito</option>
+          </select>
         </form>
       </div>
     )
