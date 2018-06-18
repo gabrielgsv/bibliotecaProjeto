@@ -7,7 +7,6 @@
 /coverage
 
 # password db
-/config/passdb.js
 /config
 
 # production
