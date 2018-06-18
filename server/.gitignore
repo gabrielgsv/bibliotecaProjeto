@@ -7,7 +7,7 @@
 /coverage
 
 # password db
-./config
+/config
 
 # production
 /build
