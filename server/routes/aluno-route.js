@@ -1,4 +1,6 @@
-var app = require('express').Router();
+var router = require('express').Router();
 var aluno = require('../controllers/aluno-controller');
 
-app.post('/cadastrar', aluno.add);
+router.get('/cadastrar', aluno.add);
+
+module.exports = router;

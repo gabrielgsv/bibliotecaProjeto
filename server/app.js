@@ -2,9 +2,10 @@
 
 var express = require('express'); // Sistema de Rotas
 var bodyParser = require('body-parser'); // BodyParser
-var app = express(); // Aplica as rotas ao meu app
 var PORT = 8000; // Porta da minha aplicação
 var db = require('./config/db'); // Recupero minha conexão
+
+var app = express(); // Aplica as rotas ao meu app
 
 // Teste de conexão
 db.authenticate()
@@ -29,3 +30,4 @@ app.use('/api/aluno', aluno);
 app.listen(PORT, () => {
     console.log(`Ouvindo na porta ${PORT} =)`);
 });
+

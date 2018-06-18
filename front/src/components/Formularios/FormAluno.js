@@ -19,7 +19,8 @@ class FormAluno extends Component {
   }
 
   handleSubmit(e){
-    
+    const response = fetch.get('/api/aluno/cadastrar');
+    alert(response);
   }
 
   render() {
