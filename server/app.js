@@ -10,9 +10,6 @@ app.use(bodyParser.json()); // Dizendo que irei enviar os dados via json
 app.use(bodyParser.urlencoded({extended: true})); // Os dados serão recuperados com method POST
 
 
-app.get('/api/helloword', (req, res) => {
-    res.send({ msg: "hello word de minha api !! ;)"});
-});
 
 // Iniciando aplicação
 app.listen(PORT, () => {
