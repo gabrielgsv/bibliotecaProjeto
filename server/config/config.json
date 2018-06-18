@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "libra2010",
+    "password": "PASS_DB",
     "database": "db_teste",
     "host": "localhost",
     "dialect": "postgresql"
