@@ -19,6 +19,12 @@ db.authenticate()
 app.use(bodyParser.json()); // Dizendo que irei enviar os dados via json
 app.use(bodyParser.urlencoded({extended: true})); // Os dados serão recuperados com method POST
 
+// Rotas
+var aluno = require('./routes/aluno-route');
+
+// URL
+app.use('/api/aluno', aluno);
+
 // Iniciando aplicação
 app.listen(PORT, () => {
     console.log(`Ouvindo na porta ${PORT} =)`);

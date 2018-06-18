@@ -10,6 +10,7 @@ class FormAluno extends Component {
       curso: '',
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -17,10 +18,14 @@ class FormAluno extends Component {
     console.log(this.state)
   }
 
+  handleSubmit(e){
+    
+  }
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Nome</label>
           <input type='text' name='nome' onChange={this.handleChange} />
 
