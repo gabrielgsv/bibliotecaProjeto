@@ -37,6 +37,7 @@ class FormAluno extends Component {
             <option value="odontologia">Odontologia</option>
             <option value="direito">Direito</option>
           </select>
+          <input type="submit" value="Enviar"/>
         </form>
       </div>
     )
