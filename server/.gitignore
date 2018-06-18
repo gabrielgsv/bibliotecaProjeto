@@ -8,7 +8,7 @@
 
 # password db
 /config/passdb.js
-/config/config
+/config/config.json
 
 # production
 /build
