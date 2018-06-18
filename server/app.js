@@ -4,7 +4,7 @@ var express = require('express'); // Sistema de Rotas
 var bodyParser = require('body-parser'); // BodyParser
 var app = express(); // Aplica as rotas ao meu app
 var PORT = 8000; // Porta da minha aplicação
-var db = require('./config/db');
+var db = require('./config/db'); // Recupero minha conexão
 
 // Teste de conexão
 db.authenticate()
