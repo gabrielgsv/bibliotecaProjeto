@@ -34,18 +34,6 @@ class FormAluno extends Component {
       })
   }
 
-  /*onClick() {
-    this.newAluno()
-      .then(res => this.setState({msg: res.msg}))
-      .catch(err => console.log(err));
-  }
-
-  newAluno = async() => {
-      const response = await fetch('/api/aluno/cadastrar');
-      const body = await response.json();
-      return body;
-  }*/
-
   render() {
     return (
       <div>
@@ -81,9 +69,6 @@ class FormAluno extends Component {
 
           <input type="submit" value="Enviar"/>
         </form>
-
-        {/*<button onClick={this.onClick.bind(this)}>ENVIAAR</button>
-        <h1>{this.state.msg}</h1>*/}
       </div>
     )
   }
