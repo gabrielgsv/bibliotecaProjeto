@@ -1,5 +1,10 @@
 var Sequelize = require('sequelize');
 
 exports.add = async(req, res) => {
-    res.send({msg: 'ok cheguei no controller !! '});
+  try {
+      const newAluno = await req.body;
+      console.log(newAluno);
+  } catch (err) { 
+      
+  }  
 };

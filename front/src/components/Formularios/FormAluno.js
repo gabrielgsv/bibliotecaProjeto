@@ -9,27 +9,25 @@ class FormAluno extends Component {
       email: '',
       senha: '',
       curso: '',
-      // msg: '',
     }
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value })
-    .then(console.log(this.state))
+    console.log(this.state);
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
-    const user = {
+  handleSubmit() {
+    const aluno = {
       nome: this.state.nome,
       email: this.state.email,
       senha: this.state.senha,
       curso: this.state.curso
     }
 
-    axios.post('/api/aluno/cadastrar', {user})
+    axios.post('/api/aluno/cadastrar', {aluno})
       .then(res => {
         console.log(res)
         console.log(res.data)
