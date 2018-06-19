@@ -26,4 +26,9 @@ const Sequelize = require('sequelize'); // instancia sequelize
     },
 });
 
+// comando para sincronizar com o banco e criar as tables
+// db.sync({force: true})
+//     .then(() => console.log('table create'))
+//     .catch(() => console.log('erro'));
+
 module.exports = Aluno;
