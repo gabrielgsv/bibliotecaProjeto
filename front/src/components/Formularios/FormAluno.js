@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class FormAluno extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class FormAluno extends Component {
       email: '',
       senha: '',
       curso: '',
-      msg: '',
+      // msg: '',
     }
     this.handleChange = this.handleChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,10 +17,26 @@ class FormAluno extends Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value })
-    console.log(this.state)
+    .then(console.log(this.state))
   }
 
-  onClick() {
+  handleSubmit(e) {
+    e.preventDefault()
+    const user = {
+      nome: this.state.nome,
+      email: this.state.email,
+      senha: this.state.senha,
+      curso: this.state.curso
+    }
+
+    axios.post('/api/aluno/cadastrar', {user})
+      .then(res => {
+        console.log(res)
+        console.log(res.data)
+      })
+  }
+
+  /*onClick() {
     this.newAluno()
       .then(res => this.setState({msg: res.msg}))
       .catch(err => console.log(err));
@@ -29,32 +46,46 @@ class FormAluno extends Component {
       const response = await fetch('/api/aluno/cadastrar');
       const body = await response.json();
       return body;
-  }
+  }*/
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Nome</label>
+          <label>Nome
           <input type='text' name='nome' onChange={this.handleChange} />
+          </label>
+          <br />
+          <br />
 
-          <label>Email</label>
+          <label>Email
           <input type='text' name='email' onChange={this.handleChange} />
-          
-          <label>Senha</label>
-          <input type='password' name='senha' onChange={this.handleChange} />
+          </label>
+          <br />
+          <br />
 
-          <label>Curso</label>
+          <label>Senha
+          <input type='password' name='senha' onChange={this.handleChange} />
+          </label>
+          <br />
+          <br />
+
+          <label>Curso
           <select onChange={this.handleChange}>
             <option value="administracao">Administração</option>
             <option value="medicina">Medicina</option>
             <option value="odontologia">Odontologia</option>
             <option value="direito">Direito</option>
           </select>
+          </label>
+          <br />
+          <br />
+
           <input type="submit" value="Enviar"/>
         </form>
-        <button onClick={this.onClick.bind(this)}>ENVIAAR</button>
-        <h1>{this.state.msg}</h1>
+
+        {/*<button onClick={this.onClick.bind(this)}>ENVIAAR</button>
+        <h1>{this.state.msg}</h1>*/}
       </div>
     )
   }
